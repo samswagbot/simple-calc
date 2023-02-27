@@ -103,18 +103,18 @@ function App() {
 
   const numbers = (num: string) => {
     const { operand, total, operator } = calc;
-
-    if (operand.toString().length < 32) {
-      setCalc({
-        ...calc,
-        operand:
-          operand % 1 === 0 && !operand.toString().includes(".")
-            ? parseFloat(operand + num)
-            : 0,
-        total: !operator ? 0 : total,
-      });
-    }
+    console.log(typeof num);
+    setCalc({
+      ...calc,
+      operand:
+        operand % 1 === 0 && !operand.toString().includes(".")
+          ? Number(operand + num)
+          : 0,
+      total: !operator ? 0 : total,
+    });
   };
+
+  
 
   const handleCommas = (num: number) => {
     if (calc.operator !== "%") {
@@ -128,11 +128,11 @@ function App() {
     if (total.toString().length >= 20 || operand.toString().length >= 20) {
       return "10px";
     }
-    if (total.toString().length >= 10 || operand.toString().length >= 10) {
+    if (total.toString().length >= 6 || operand.toString().length >= 6) {
       return "1rem";
     }
 
-    return "2rem";
+    return "3rem";
   };
 
   const handleOnClick = (e: any) => {

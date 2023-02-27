@@ -9,12 +9,12 @@ body {
 }
 
 .calcGrid {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: sans-serif;
   justify-content: center;
   display: grid;
   color: white;
   gap: 8px;
-  padding: 2rem 0;
+  padding: 5rem 0 2rem 0;
   grid-template-columns: repeat(4, 3rem);
   grid-template-rows: minmax(3rem, auto) repeat(5, 3rem);
 }
@@ -31,8 +31,7 @@ body {
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
-  
-  font-weight: 300;
+  font-weight: lighter;
 }
 
 .total div {
