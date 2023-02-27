@@ -103,7 +103,7 @@ function App() {
 
   const numbers = (num: string) => {
     const { operand, total, operator } = calc;
-    console.log(typeof num);
+    
     setCalc({
       ...calc,
       operand:
