@@ -1,0 +1,69 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.calcGrid {
+  font-family: Arial, Helvetica, sans-serif;
+  justify-content: center;
+  display: grid;
+  color: white;
+  gap: 8px;
+  padding: 2rem 0;
+  grid-template-columns: repeat(4, 3rem);
+  grid-template-rows: minmax(3rem, auto) repeat(5, 3rem);
+}
+
+.zero {
+  grid-column: span 2;
+  border-radius: 40px;
+  text-align: left;
+  text-indent: 10px;
+}
+
+.total {
+  grid-column: 1/ -1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  
+  font-weight: 300;
+}
+
+.total div {
+  margin-right: 10px;
+  margin-bottom: 2px;
+}
+
+.actions {
+  background-color: #a5a5a5;
+  color: black;
+  font-size: 1.2rem;
+}
+
+button {
+  border: none;
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
+  font-size: 1.5rem;
+  background-color: #333;
+  outline: none;
+}
+
+.operators {
+  background-color: #f1a33c;
+}
+
+.wrapper {
+  background-color: black;
+  width: fit-content;
+  padding: 12px;
+  margin: auto;
+  margin-top: 20px;
+}
